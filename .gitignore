@@ -1,0 +1,255 @@
+# ============================================================
+# APK-X Enterprise Suite v11.0 - Git Ignore
+# Architect: Jim (30yr EXP) | Developer: Bob
+# ============================================================
+
+# ===== PYTHON =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ===== VIRTUAL ENVIRONMENT =====
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+*.sublime-workspace
+.project
+.classpath
+.settings/
+*.iml
+
+# ===== OS =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ===== APK FILES =====
+*.apk
+*.dex
+*.smali
+*.ap_
+*.aab
+*.xapk
+*.apks
+
+# ===== NATIVE LIBRARIES =====
+*.so.bak
+*.so.patched
+*.so.original
+
+# ===== DATABASE =====
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ===== LOGS =====
+*.log
+*.log.*
+Logs/
+logs/
+log/
+
+# ===== TEMP =====
+Temp/
+tmp/
+temp/
+.tmp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.original
+*.patch
+
+# ===== OUTPUT (Uncomment to track) =====
+Output/
+Patched/
+Modded/
+Build/
+
+# ===== BACKUPS =====
+Backups/
+backups/
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# ===== SENSITIVE =====
+*.keystore
+*.jks
+*.pem
+*.key
+*.crt
+*.cert
+*.p12
+*.pfx
+config.local.yaml
+config.secret.yaml
+.env
+.env.*
+credentials.json
+secrets.json
+
+# ===== DOCKER =====
+docker-compose.override.yml
+.docker/
+*.dockerignore.local
+
+# ===== CLOUD =====
+.gcloudignore
+*.gcignore
+
+# ===== TESTING =====
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# ===== PROFILING =====
+.profile/
+*.prof
+*.lprof
+
+# ===== JUPYTER =====
+.ipynb_checkpoints/
+*.ipynb
+
+# ===== MYPY =====
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ===== PYRE =====
+.pyre/
+
+# ===== PYLINT =====
+.pylint.d/
+
+# ===== RUFF =====
+.ruff_cache/
+
+# ===== PACKAGE MANAGER =====
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+Pipfile.lock
+poetry.lock
+
+# ===== SPECIFIC TO APK-X =====
+apkx_enterprise.db
+apkx_*.db
+*.keystore
+debug.keystore
+release.keystore
+/sdcard/APKX_Enterprise/Output/*
+/sdcard/APKX_Enterprise/Backups/*
+/sdcard/APKX_Enterprise/Logs/*
+/sdcard/APKX_Enterprise/Database/*
+/sdcard/APKX_Enterprise/Temp/*
+/sdcard/APKX_Enterprise/Reports/*
+!/sdcard/APKX_Enterprise/Plugins/
+!/sdcard/APKX_Enterprise/Plugins/*.py
+
+# ===== TERMUX =====
+/data/data/com.termux/
+~/storage/
+
+# ===== CUSTOM =====
+work/
+decompiled/
+smali/
+res/
+original/
+unsigned/
+aligned/
+*.unsigned.apk
+*.aligned.apk
+
+# ===== ARCHIVES =====
+*.7z
+*.bz2
+*.gz
+*.xz
+*.lzma
+*.zst
+
+# ===== MEDIA =====
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.wmv
+*.flv
+*.mp3
+*.wav
+*.flac
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.svg
+*.ico
+
+# ===== DOCUMENTS =====
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.odt
+*.ods
+*.odp
+
+# ===== LARGE FILES (GitHub 100MB limit) =====
+# Files larger than 50MB should not be tracked
+# Use Git LFS for large files:
+# git lfs track "*.apk"
+# git lfs track "*.so"
+
+# ===== EXCEPTIONS =====
+# Keep example files
+!example.apk
+!test.apk
+!plugins/example_plugin.py
+!docs/

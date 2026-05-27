@@ -1,0 +1,8 @@
+APK-X Enterprise Suite
+├── Core Engine (Python 3.9+)
+├── Database Layer (SQLite)
+├── Plugin System (Dynamic Loading)
+├── AI Engine (Heuristic + ML)
+├── Cloud API (REST)
+├── Security Manager (Hashing + Signing)
+└── Performance Optimizer
