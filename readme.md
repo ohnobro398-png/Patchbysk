@@ -1,22 +1,43 @@
-# 🏢 APK-X Enterprise Suite v11.0
+# Patchbysk — Honest README
 
-[![Version](https://img.shields.io/badge/version-11.0-red)](https://github.com)
-[![Python](https://img.shields.io/badge/python-3.9+-blue)](https://python.org)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+**What this is**
 
-**World's Most Advanced APK Reverse Engineering Platform**
-Cloud-Native | AI-Powered | Enterprise Grade
+Patchbysk is a small, local Python tool for patching Android APK files for personal, authorized use only. It runs on your own device and does not include any remote control, account access, or bulk-harvesting features.
 
----
+**Authorized use only**
 
-## 🚀 Quick Start
+Use Patchbysk only on APK files you own or have explicit permission to modify, and only on devices and accounts you control. Do not use it on other people's apps, accounts, or devices, and do not use it to bypass protections, steal data, or evade platform rules.
+
+**How it works**
+
+- `main.py` provides the command-line interface.
+- `lm.py` contains the patching logic.
+- `setup.sh` installs dependencies.
+- `requirements.txt` lists Python dependencies.
+
+**Installation**
 
 ```bash
-# One-command setup
 bash setup.sh
+```
 
-# Show dashboard
+**Usage**
+
+```bash
 python main.py dashboard
+python main.py patch /path/to/your/app.apk
+```
 
-# Patch an APK
-python main.py patch /sdcard/app.apk
+**What this tool does not do**
+
+- It does not unlock, root, or modify other people's devices.
+- It does not access accounts, credentials, or private data.
+- It does not distribute, resell, or modify third-party apps for others.
+
+**Safety note**
+
+Patching an APK can break the app or void support from its developer. Make a backup before patching, and do not install modified APKs from untrusted sources.
+
+**License**
+
+See the repository's LICENSE file, if present. If no LICENSE file is present, all rights are reserved.
