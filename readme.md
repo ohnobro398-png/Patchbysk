@@ -1,43 +1,57 @@
-# Patchbysk — Honest README
+# Patchbysk — APK Analysis and Patching Toolkit
 
-**What this is**
+A Python command-line toolkit for APK patching workflows. The codebase identifies itself as "APK-X Enterprise Suite v11.0" (see `main.py`).
 
-Patchbysk is a small, local Python tool for patching Android APK files for personal, authorized use only. It runs on your own device and does not include any remote control, account access, or bulk-harvesting features.
+## What it does
 
-**Authorized use only**
+- `dashboard` — show the tool dashboard
+- `stats` — show usage statistics
+- `patch <apk>` — run the patch workflow on an APK file
 
-Use Patchbysk only on APK files you own or have explicit permission to modify, and only on devices and accounts you control. Do not use it on other people's apps, accounts, or devices, and do not use it to bypass protections, steal data, or evade platform rules.
+The tool stores its working data under an `APKX_Enterprise` directory (output, backups, logs, database, plugins, temp, reports) and uses a local SQLite database.
 
-**How it works**
+## Requirements
 
-- `main.py` provides the command-line interface.
-- `lm.py` contains the patching logic.
-- `setup.sh` installs dependencies.
-- `requirements.txt` lists Python dependencies.
+- Python 3.9+
+- System tools (installed by `setup.sh`): JDK 17, `aapt`, `apksigner`, `apktool`, `git`, `wget`, `curl`
+- Python packages in `requirements.txt` (rich, colorama, requests, pycryptodome, lxml, beautifulsoup4, pyyaml, tqdm, cryptography, jinja2)
 
-**Installation**
+## Install
 
 ```bash
 bash setup.sh
 ```
 
-**Usage**
+## Usage
 
 ```bash
 python main.py dashboard
-python main.py patch /path/to/your/app.apk
+python main.py patch /path/to/app.apk
+python main.py stats
 ```
 
-**What this tool does not do**
+## Authorized use only
 
-- It does not unlock, root, or modify other people's devices.
-- It does not access accounts, credentials, or private data.
-- It does not distribute, resell, or modify third-party apps for others.
+Use this tool **only on APKs you own or are explicitly authorized to test**. Do not use it to bypass protections, access other people's accounts or data, or break platform rules.
 
-**Safety note**
+## Repository contents
 
-Patching an APK can break the app or void support from its developer. Make a backup before patching, and do not install modified APKs from untrusted sources.
+| File | Purpose |
+|---|---|
+| `main.py` | Main CLI entry point |
+| `lm.py` | Supporting module |
+| `setup.sh` | One-command environment setup (Termux or Linux) |
+| `requirements.txt` | Python dependencies |
+| `.github/workflows/pylint.yml` | Existing lint workflow |
 
-**License**
+## Limitations (honest)
 
-See the repository's LICENSE file, if present. If no LICENSE file is present, all rights are reserved.
+- No automated tests in this repository.
+- No `LICENSE` file in this repository — the license is currently unspecified.
+- The grand claims in the code's own comments (company names, "enterprise grade" wording) are the original author's, not verified here.
+
+## Roadmap
+
+- Add automated tests
+- Add a `LICENSE` file
+- Document each command's options in detail
